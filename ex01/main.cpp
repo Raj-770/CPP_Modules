@@ -6,29 +6,34 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:35:07 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/07/31 15:06:37 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:06:44 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
 #include "PhoneBook.hpp"
+#include <iostream>
+#include <string>
 
 int main() {
-    PhoneBook phoneBook;
-    char choice = 'y';
+	PhoneBook phoneBook;
+	std::string command;
 
-    while (choice == 'y' || choice == 'Y') {
+	while (true) {
 
-        std::cout << "Adding a new contact." << std::endl;
-        phoneBook.addContact();
+		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
+		std::getline(std::cin, command);
 
-        std::cout << "Would you like to add another contact? (y/n): ";
-        std::cin >> choice;
+		if (command == "EXIT") {
+			std::cout << "Thank you for using the phone book. Byee!" << std::endl;
+			break;
+		} else if (command == "ADD") {
+			phoneBook.addContact();
+		} else if (command == "SEARCH") {
+			phoneBook.searchContact();
+		} else {
+			std::cout << "Invalid Command!" << std::endl;
+		}
+	}
 
-        // Clear the input buffer to avoid skipping input after a non-integer input.
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
-
-
-    return 0;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:40:45 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/07/31 15:08:02 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:07:28 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <sstream>
 
 class PhoneBook
 {
@@ -23,9 +25,13 @@ class PhoneBook
 		int numberOfContacts;
 		Contact contacts[8];
 
+		// Helper Methods
+		std::string turncateString(const std::string& str) const;
+
 	public:
 		PhoneBook();
 		void addContact();
+		void searchContact() const;
 };
 
 #endif
