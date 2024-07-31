@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:00:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/07/31 14:11:23 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/07/31 14:38:02 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class Contact
 		std::string darkestSecret;
 
 	public:
+		Contact(const std::string &firstName, const std::string &lastName, const std::string &nickName, const std::string &phoneNumber, const std::string &darkestSecret);
+
 		std::string getFirstName() const;
 		void setFirstName(const std::string &firstName);
 
@@ -44,6 +46,6 @@ class Contact
 
 		std::string getDarkestSecret() const;
 		void setDarkestSecret(const std::string &darkestSecret);
-}
+};
 
 #endif
