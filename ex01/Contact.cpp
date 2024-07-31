@@ -6,14 +6,14 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:14:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/07/31 14:38:34 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/07/31 15:37:23 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 // Constructor
-Contact::Contact(const std::string &firstName, const std::string &lastName, const std::string &nickName, const std::string &phoneNumber, const std::string &darkestSecret): firstName(firstName), lastName(lastName), nickName(nickName), phoneNumber(phoneNumber), darkestSecret(darkestSecret) {}
+Contact::Contact() {}
 
 // Getters
 std::string Contact::getFirstName() const {
