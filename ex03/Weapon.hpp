@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 16:02:46 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/01 16:05:53 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/01 16:12:38 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Weapon {
 
 	public:
 		Weapon(std::string type);
+		~Weapon();
 		std::string getType() const;
 		void setType(std::string type);
 };
