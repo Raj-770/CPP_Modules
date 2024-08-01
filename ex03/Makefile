@@ -1,4 +1,4 @@
-NAME	:= zombie
+NAME	:= crazyHumans
 CC		:= c++
 CFLAGS	:= -Wextra -Wall -Werror -std=c++98
 

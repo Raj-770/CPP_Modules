@@ -1,4 +1,4 @@
-NAME	:= zombie
+NAME	:= reference_and_pointers
 CC		:= c++
 CFLAGS	:= -Wextra -Wall -Werror -std=c++98
 
