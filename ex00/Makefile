@@ -13,9 +13,6 @@ $(NAME): $(OBJS)
 %.o: %.cpp
 	${CC} ${CFLAGS} -c $< -o $@
 
-SRCS = megaphone.cpp
-OBJS = $(SRCS:.cpp=.o)
-
 clean:
 	rm -rf $(OBJS)
 
