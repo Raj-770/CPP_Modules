@@ -1,4 +1,16 @@
-#include "Point.cpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bsp.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/02 17:56:14 by rpambhar          #+#    #+#             */
+/*   Updated: 2024/08/02 17:59:37 by rpambhar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Point.hpp"
 
 static Fixed triangleArea(const Point& a, const Point& b, const Point& c) {
 	// Triangle area calculation: 0.5 * abs(x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2))

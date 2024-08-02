@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 17:28:10 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 17:34:05 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:48:48 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Point::Point(const Point& other) : x(other.x), y(other.y) {}
 
 // Copy assignment operator (does nothing as x and y are const)
 Point& Point::operator=(const Point& other) {
+	(void) other;
 	return *this;
 }
 
