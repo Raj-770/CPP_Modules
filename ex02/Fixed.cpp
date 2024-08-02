@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:11:17 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 16:05:07 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 16:10:23 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,26 +77,52 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fixed) {
 }
 
 // Comparison operators
-bool Fixed::operator>(const Fixed &other) {
+bool Fixed::operator>(const Fixed &other) const {
 	return (this->_value > other._value);
 }
 
-bool Fixed::operator<(const Fixed &other) {
+bool Fixed::operator<(const Fixed &other) const {
 	return (this->_value < other._value);
 }
 
-bool Fixed::operator>=(const Fixed &other) {
+bool Fixed::operator>=(const Fixed &other) const {
 	return (this->_value >= other._value);
 }
 
-bool Fixed::operator<=(const Fixed &other) {
+bool Fixed::operator<=(const Fixed &other) const {
 	return (this->_value <= other._value);
 }
 
-bool Fixed::operator==(const Fixed &other) {
+bool Fixed::operator==(const Fixed &other) const {
 	return (this->_value == other._value);
 }
 
-bool Fixed::operator!=(const Fixed &other) {
+bool Fixed::operator!=(const Fixed &other) const {
 	return (this->_value != other._value);
 }
+
+// Arithmetic operators
+Fixed Fixed::operator+(const Fixed &other) const {
+	Fixed result;
+	result.setRawBits(this->_value + other._value);
+	return (result);
+}
+
+Fixed Fixed::operator-(const Fixed &other) const {
+	Fixed result;
+	result.setRawBits(this->_value - other._value);
+	return (result);
+}
+
+Fixed Fixed::operator*(const Fixed &other) const {
+	Fixed result;
+	result.setRawBits((this->_value * other._value) >> _fractionalBits)
+	return (result);
+}
+
+Fixed Fixed::operator/(const Fixed &other) const {
+	Fixed result;
+	result.setRawBits((this->_value << _fractionalBits) / other._value);
+	return (result);
+}
+
