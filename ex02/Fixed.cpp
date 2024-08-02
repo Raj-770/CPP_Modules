@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:11:17 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 16:38:33 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:04:59 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,21 @@
 const int Fixed::_fractionalBits = 8;
 
 // Default constructor
-Fixed::Fixed() : _value(0) {
-	std::cout << "Default constructor called" << std::endl;
-}
+Fixed::Fixed() : _value(0) {}
 
 // Integer constructor
-Fixed::Fixed(const int intVal) : _value(intVal << _fractionalBits) {
-	std::cout << "Int constructor called" << std::endl;
-}
+Fixed::Fixed(const int intVal) : _value(intVal << _fractionalBits) {}
 
 // Float constructor
-Fixed::Fixed(const float floatVal) : _value(roundf(floatVal * (1 << _fractionalBits))) {
-	std::cout << "Float constructor called" << std::endl;
-}
+Fixed::Fixed(const float floatVal) : _value(roundf(floatVal * (1 << _fractionalBits))) {}
 
 // Copy constructor
 Fixed::Fixed(const Fixed &other) : _value(other._value) {
-	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Copy assignment operator
 Fixed &Fixed::operator=(const Fixed &other) {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other) {
 		this->_value = other.getRawBits();
 	}
@@ -47,7 +39,6 @@ Fixed &Fixed::operator=(const Fixed &other) {
 
 // Destructor
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
 }
 
 // Get the raw fixed-point value
@@ -116,7 +107,7 @@ Fixed Fixed::operator-(const Fixed &other) const {
 
 Fixed Fixed::operator*(const Fixed &other) const {
 	Fixed result;
-	result.setRawBits((this->_value * other._value) >> _fractionalBits)
+	result.setRawBits((this->_value * other._value) >> _fractionalBits);
 	return (result);
 }
 
