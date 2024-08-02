@@ -6,12 +6,12 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:11:17 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 15:35:15 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 15:43:15 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
+#include <cmath>
 
 const int Fixed::_fractionalBits = 8;
 
@@ -22,12 +22,12 @@ Fixed::Fixed() : _value(0) {
 
 // Integer constructor
 Fixed::Fixed(const int intVal) : _value(intVal << _fractionalBits) {
-	std::cout << "Int constructor called"
+	std::cout << "Int constructor called" << std::endl;
 }
 
 // Float constructor
 Fixed::Fixed(const float floatVal) : _value(roundf(floatVal * (1 << _fractionalBits))) {
-	std::cout << "Float constructor called"
+	std::cout << "Float constructor called" << std::endl;
 }
 
 // Copy constructor
@@ -52,13 +52,11 @@ Fixed::~Fixed() {
 
 // Get the raw fixed-point value
 int Fixed::getRawBits(void) const {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_value);
 }
 
 // Set the raw fixed-point value
 void Fixed::setRawBits(const int raw) {
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
 
@@ -69,7 +67,7 @@ int Fixed::toInt(void) const {
 
 // Convert to float
 float Fixed::toFloat(void) const {
-	return static_cast<float>(_value / (1 << _fractionalBits));
+	return ((static_cast<float>(_value)) / (1 << _fractionalBits));
 }
 
 // Overload << operator

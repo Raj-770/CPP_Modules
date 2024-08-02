@@ -6,12 +6,14 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:03:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 15:29:10 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 15:37:27 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
+
+# include <iostream>
 
 class Fixed {
 	private:
