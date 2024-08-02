@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:03:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 13:40:18 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 15:29:10 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@
 class Fixed {
 	private:
 		int _value;
-		static const int _fractionalBits = 8;
+		static const int _fractionalBits;
 
 	public:
 		Fixed();
+		Fixed(const int intVal);
+		Fixed(const float floatVal);
 		Fixed(const Fixed &other);
 		Fixed &operator=(const Fixed &other);
 		~Fixed();
