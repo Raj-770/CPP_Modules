@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:11:17 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 16:10:23 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 16:35:19 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,3 +126,25 @@ Fixed Fixed::operator/(const Fixed &other) const {
 	return (result);
 }
 
+// Increment and decrement operators
+Fixed& Fixed::operator++() {
+	this->_value++;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int) {
+	Fixed temp = *this;
+	++(*this);
+	return (temp);
+}
+
+Fixed& Fixed::operator--() {
+	this->_value--;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int) {
+	Fixed temp = *this;
+	--(*this);
+	return (temp);
+}
