@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:11:17 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 16:35:19 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/02 16:38:33 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,22 @@ Fixed Fixed::operator--(int) {
 	Fixed temp = *this;
 	--(*this);
 	return (temp);
+}
+
+
+// Min and Max functions
+Fixed& Fixed::min(Fixed& a, Fixed& b) {
+	return (a < b ? a : b);
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b) {
+	return (a < b ? a : b);
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b) {
+	return (a > b ? a : b);
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b) {
+	return (a > b ? a : b);
 }
