@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:16:42 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/03 15:16:58 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/03 15:45:47 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	ScavTrap &operator=(const ScavTrap &source);
 	~ScavTrap();
 
-	void attack(const std::string &target) override;
+	void attack(const std::string &target);
 	void guardGate();
 };
 

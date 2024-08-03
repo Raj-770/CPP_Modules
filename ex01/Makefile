@@ -3,7 +3,8 @@ CC		:= c++
 CFLAGS	:= -Wextra -Wall -Werror -std=c++98
 
 SRCS	:=	main.cpp \
-			ClapTrap.cpp
+			ClapTrap.cpp \
+			ScavTrap.cpp
 
 OBJS	:= $(SRCS:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:08:26 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/03 14:28:57 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/03 16:04:10 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include<iostream>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string name;
 		unsigned int hitPoints;
 		unsigned int energyPoints;
