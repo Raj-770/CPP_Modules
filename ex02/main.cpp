@@ -6,33 +6,32 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:08:23 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/03 15:23:29 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/03 16:14:24 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include <iostream>
 
 int main() {
-	// Test ClapTrap
-	ClapTrap ct("CT-01");
-	ct.attack("Enemy");
-	ct.takeDamage(5);
-	ct.beRepaired(3);
-	ct.takeDamage(6);
-	ct.attack("Enemy");
-	ct.beRepaired(4);
+    ClapTrap clap("ClapUnit");
+    ScavTrap scav("ScavUnit");
+    FragTrap frag("FragUnit");
 
-	// Test ScavTrap
-	ScavTrap st("ST-01");
-	st.attack("Enemy");
-	st.takeDamage(30);
-	st.beRepaired(10);
-	st.guardGate();
-	st.takeDamage(100);
-	st.attack("Enemy");
-	st.beRepaired(50);
+    clap.attack("a target");
+    scav.attack("a different target");
+    frag.attack("yet another target");
 
-	return 0;
+    clap.takeDamage(10);
+    scav.takeDamage(20);
+    frag.takeDamage(30);
+
+    clap.beRepaired(5);
+    scav.beRepaired(10);
+    frag.beRepaired(15);
+
+    scav.guardGate();
+    frag.highFivesGuys();
+
+    return 0;
 }
