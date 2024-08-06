@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:06:04 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/06 15:15:31 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:50:30 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 // Default Constructor
 Animal::Animal() {
-	std::out << "Animal default constructor called" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
 }
 
 // Constrcutor with parmeter type
 Animal::Animal(std::string type): type(type) {
-	std::out << "Animal constructor with parameter called" << std::endl;
+	std::cout << "Animal constructor with parameter called" << std::endl;
 }
 
 // Copy constructor
 Animal::Animal(const Animal& other) : type(other.type) {
-	std::out << "Animal copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 }
 
 // Assignment Operator
 Animal &Animal::operator=(const Animal& other) {
-	std::out << "Animal assignment operator called" << std::endl;
+	std::cout << "Animal assignment operator called" << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}
@@ -38,7 +38,7 @@ Animal &Animal::operator=(const Animal& other) {
 
 // Destructor
 Animal::~Animal () {
-	std::out << "Animal destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 
 std::string Animal::getType(void) const {
@@ -46,5 +46,5 @@ std::string Animal::getType(void) const {
 }
 
 void Animal::makeSound(void) const {
-	std::out << "Oink Oink!" << std::endl;
+	std::cout << "Oink Oink!" << std::endl;
 }
