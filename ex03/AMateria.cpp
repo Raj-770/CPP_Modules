@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:14:33 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 17:29:13 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:37:41 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ AMateria::AMateria(std::string const & type) : _type(type) {}
 AMateria::AMateria(const AMateria& other) : _type(other._type) {}
 
 AMateria& AMateria::operator=(const AMateria& other) {
-	if (this != &other) {
-		_type = other._type
-	}
+	(void) other;
 	return (*this);
 }
 

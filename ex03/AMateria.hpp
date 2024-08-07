@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:10:28 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 17:24:10 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:33:02 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ class AMateria {
 		std::string const & getType(void) const;
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
-}
+};
 
 #endif
