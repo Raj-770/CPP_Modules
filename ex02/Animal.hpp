@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 14:50:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/06 15:01:46 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:27:45 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal {
 		virtual ~Animal();
 
 		std::string getType(void) const;
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
 };
 
 #endif
