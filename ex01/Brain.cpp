@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 09:58:56 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 10:07:58 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:30:47 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ Brain::Brain() {
 }
 
 Brain::Brain(const Brain& other) {
-	*this = src;
+	*this = other;
 	std::cout << "Brain copy constructor called" << std::endl;
 }
 
 Brain& Brain::operator=(const Brain& other) {
 	std::cout << "Brain assignment operator called" << std::endl;
-	if (this != other) {
+	if (this != &other) {
 		for (int i = 0; i < 100; i++){
 			ideas[i] = other.ideas[i];
 		}
@@ -51,6 +51,6 @@ void Brain::setIdea(int index, const std::string& idea) {
 void Brain::printIdeas(void) const {
 	for (int i = 0; i < 100; i++) {
 		if (ideas[i].empty() == false)
-			std::cout << "Idea " << i + 1 << ": " << idea[i] << std::endl;
+			std::cout << "Idea " << i + 1 << ": " << ideas[i] << std::endl;
 	}
 }

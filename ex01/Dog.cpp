@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:21:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 10:17:48 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:47:46 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,8 @@ Dog::~Dog() {
 
 void Dog::makeSound(void) const {
 	std::cout << "Woof Woof!" << std::endl;
+}
+
+Brain& Dog::getBrain(void) {
+	return (*brain);
 }

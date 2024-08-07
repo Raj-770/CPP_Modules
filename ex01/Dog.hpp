@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:16:44 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 10:15:59 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:47:27 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Dog : public Animal {
 		~Dog();
 
 		void makeSound(void) const;
+		Brain& getBrain(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 16:02:02 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 10:15:01 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:30:17 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cat::Cat() {
 	type = "Cat";
-	brain(new Brain());
+	brain = new Brain();
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
@@ -38,4 +38,8 @@ Cat::~Cat() {
 
 void Cat::makeSound() const {
 	std::cout << "Meow!" << std::endl;
+}
+
+Brain& Cat::getBrain(void) {
+	return (*brain);
 }
