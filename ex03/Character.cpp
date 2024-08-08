@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 13:58:10 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 14:19:40 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 15:23:11 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Character::Character() {}
 
 Character::Character(std::string const & name) : name(name) {
 	for (int i = 0; i < 4; i++){
-		inventory[i] = nullptr;
+		inventory[i] = NULL;
 	}
 }
 
@@ -25,7 +25,7 @@ Character::Character(const Character &other) : name(other.name) {
 		if (other.inventory[i])
 			inventory[i] = other.inventory[i]->clone();
 		else
-			inventory[i] = nullptr;
+			inventory[i] = NULL;
 	}
 }
 
@@ -34,7 +34,7 @@ Character& Character::operator=(const Character& other) {
 		name = other.name;
 		for (int i = 0; i < 4; ++i) {
 			delete inventory[i];
-			inventory[i] = other.inventory[i] ? other.inventory[i]->clone() : nullptr;
+			inventory[i] = other.inventory[i] ? other.inventory[i]->clone() : NULL;
 		}
 	}
 	return (*this);
@@ -61,7 +61,7 @@ void Character::equip(AMateria* m) {
 
 void Character::unequip(int idx) {
 	if (idx >= 0 && idx < 4)
-		inventory[idx] = nullptr;
+		inventory[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target) {

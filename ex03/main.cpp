@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 14:38:00 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 14:52:29 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 15:19:50 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int main() {
 	delete me;
 	delete src;
 	delete cure;
+	delete fourthIce;
 
 	std::cout << "All done. Resources cleaned up." << std::endl;
 
