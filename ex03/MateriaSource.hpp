@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 14:27:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 14:32:06 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:40:24 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ class MateriaSource : public IMateriaSource {
 
 		void learnMateria(AMateria* m);
 		AMateria* createMateria(std::string const & type);
-}
+};
 
 #endif

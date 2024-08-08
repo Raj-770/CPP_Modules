@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.h                                       :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 13:48:07 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 13:50:15 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:45:11 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ class ICharacter {
 		virtual ~ICharacter() {}
 		virtual std::string const & getName() const = 0;
 		virtual void equip(AMateria* m) = 0;
-		virtual void use(int idx, Icharacter& target) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 };
-
-#endif
 
 #endif

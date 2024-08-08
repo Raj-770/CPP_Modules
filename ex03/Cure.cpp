@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:43:19 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 13:46:01 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:40:39 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Cure::Cure() : AMateria("cure") {}
 
 Cure::Cure(const Cure& other) : AMateria(other) {}
 
-Cuer& Cure::operator=(const Cure& other) {
+Cure& Cure::operator=(const Cure& other) {
 	AMateria::operator=(other);
 	return (*this);
 }

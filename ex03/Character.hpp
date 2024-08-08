@@ -6,19 +6,19 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 13:51:53 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/08 14:19:52 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:40:12 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include "ICharacter.h"
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 #include <string>
 #include <iostream>
 
-class Character : public ICharcter {
+class Character : public ICharacter {
 	private:
 		std::string name;
 		AMateria* inventory[4];
@@ -33,7 +33,7 @@ class Character : public ICharcter {
 		std::string const & getName() const;
 		void equip(AMateria* m);
 		void unequip(int idx);
-		void use(int idx, ICharcter& target);
+		void use(int idx, ICharacter& target);
 };
 
 #endif
