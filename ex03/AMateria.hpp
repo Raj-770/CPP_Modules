@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:10:28 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 17:33:02 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:32:42 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 #include <iostream>
-#include "ICharacter.h"
+#include "ICharacter.hpp"
 
 class AMateria {
 	protected:

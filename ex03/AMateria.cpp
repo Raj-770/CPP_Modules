@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMteria.cpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:14:33 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 17:37:41 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:33:51 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ std::string const & AMateria::getType() const {
 	return (_type);
 }
 
-void AMateria::use(ICharcter& target) {
+void AMateria::use(ICharacter& target) {
 	std::cout << "Using AMateria on " << target.getName() << std::endl;
 }
