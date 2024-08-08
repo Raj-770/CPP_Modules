@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 17:41:08 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/07 17:43:14 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/08 13:57:31 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ class Cure : public AMateria {
 
 		AMateria* clone() const;
 		void use(ICharacter& target);
-}
+};
 
 #endif
