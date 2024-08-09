@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 19:31:48 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/09 16:40:37 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/09 17:25:52 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,20 @@ class Bureaucrat {
 		void incrementGrade(int gradeToIncrease);
 		void decrementGrade(int gradeToDecrease);
 
+	class GradeTooHighException : public std::runtime_error {
+		public:
+			GradeTooHighException(const std::string &message);
+	};
+
+	class GradeTooLowException : public std::runtime_error {
+		public:
+			GradeTooLowException(const std::string &message);
+	};
+
 };
 
 std::ostream& operator<<(std::ostream &output, Bureaucrat const& bureaucrat);
 
-/* In the prototype the const throw() says the compiler that the function what won't thow any exceptions */
-class GradeTooHighException : public std::runtime_error {
-	public:
-		GradeTooHighException(const std::string &message);
-};
 
-class GradeTooLowException : public std::runtime_error {
-	public:
-		GradeTooLowException(const std::string &message);
-};
 
 #endif
