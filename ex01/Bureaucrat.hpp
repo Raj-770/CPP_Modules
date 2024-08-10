@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 19:31:48 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/09 17:25:52 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 12:05:54 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <string>
 #include <iostream>
 #include <exception>
+
+class Form;
 
 class Bureaucrat {
 	private:
@@ -30,6 +32,8 @@ class Bureaucrat {
 
 		std::string const getName() const;
 		int getGrade() const;
+
+		void signForm(Form& form);
 
 		void incrementGrade(int gradeToIncrease);
 		void decrementGrade(int gradeToDecrease);
