@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 09:50:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/10 10:34:41 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 11:33:20 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ class ShrubberyCreationForm : public AForm {
 		static const std::string tree;
 
 	public:
-		ShrubberryCreationForm(const std::string &target);
-		ShrubberryCreationForm(const ShrubberyCreationForm& other);
-		ShrubberryCreationForm& operator=(const ShrubberryCreationForm& other);
-		~ShrubberryCreationForm();
+		ShrubberyCreationForm(const std::string &target);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+		~ShrubberyCreationForm();
 
 		void execute(const Bureaucrat &executor) const;
-}
+};
 
 #endif

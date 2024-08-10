@@ -6,14 +6,18 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 17:22:41 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/10 10:39:21 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 11:44:21 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include "Bureaucrat.hpp"
+#include <iostream>
+#include <string>
+#include <exception>
+
+class Bureaucrat;
 
 class AForm {
 	private:
@@ -24,8 +28,8 @@ class AForm {
 
 	public:
 		AForm(const std::string &name, const int gradeToSign, const int gradeToExecute);
-		AForm(const Form& other);
-		AForm& operator=(const Form& other);
+		AForm(const AForm& other);
+		AForm& operator=(const AForm& other);
 		~AForm();
 
 		const std::string& getName() const;
@@ -50,9 +54,9 @@ class AForm {
 		class FormNotSignedException : public std::runtime_error {
 			public:
 				FormNotSignedException(const std::string &message);
-		}
+		};
 };
 
-std::ostream& operator<<(std::ostream &output, Form const &form);
+std::ostream& operator<<(std::ostream &output, AForm const &form);
 
 #endif

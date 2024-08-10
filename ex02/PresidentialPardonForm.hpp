@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 11:21:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/10 11:24:05 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 12:03:46 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
 		~PresidentialPardonForm();
 
-		void execute(const Bureaucrat &executor) const;
+		void execute(const Bureaucrat& bureaucrat) const;
 };
 
 #endif

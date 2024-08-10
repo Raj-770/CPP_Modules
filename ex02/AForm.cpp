@@ -6,20 +6,21 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 18:01:20 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/10 10:39:11 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 11:48:49 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
 AForm::AForm(const std::string &name, const int gradeToSign, const int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute) {
 	if (gradeToSign < 1 || gradeToExecute < 1)
-		throw Form::GradeTooHighException(_name + ", Grade too high!");
+		throw AForm::GradeTooHighException(_name + ", Grade too high!");
 	if (gradeToSign > 150 || gradeToExecute > 150)
-		throw Form::GradeTooLowException(_name + ", Grade too low!");
+		throw AForm::GradeTooLowException(_name + ", Grade too low!");
 }
 
-AForm::AForm(const Form& other) : _name(other._name), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute) {}
+AForm::AForm(const AForm& other) : _name(other._name), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute) {}
 
 AForm& AForm::operator=(const AForm& other) {
 	if (this != &other) {
