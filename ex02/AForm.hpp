@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 17:22:41 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/09 18:16:15 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:39:26 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Bureaucrat.hpp"
 
-class Form {
+class AForm {
 	private:
 		const std::string _name;
 		bool _isSigned;
@@ -23,16 +23,19 @@ class Form {
 		const int _gradeToExecute;
 
 	public:
-		Form(const std::string &name, const int gradeToSign, const int gradeToExecute);
-		Form(const Form& other);
-		Form& operator=(const Form& other);
-		~Form();
+		AForm(const std::string &name, const int gradeToSign, const int gradeToExecute);
+		AForm(const Form& other);
+		AForm& operator=(const Form& other);
+		~AForm();
 
 		const std::string& getName() const;
 		bool getIsSigned() const;
 		int getGradeToSign() const;
 		int getGradeToExecute() const;
+
 		void beSigned(Bureaucrat &bureaucrat);
+		void checkExecutionRequirements(const Bureaucrat &bureaucrat);
+		virtual void execute(Bureaucrat const &executor) const = 0;
 
 		class GradeTooHighException : public std::runtime_error {
 			public:
@@ -43,6 +46,11 @@ class Form {
 			public:
 				GradeTooLowException(const std::string &message);
 		};
+
+		class FormNotSignedException : public std::runtime_error {
+			public:
+				GradeTooLowException(const std::string &message);
+		}
 };
 
 std::ostream& operator<<(std::ostream &output, Form const &form);
