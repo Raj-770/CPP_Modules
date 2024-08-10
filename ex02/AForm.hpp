@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 17:22:41 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/10 09:39:26 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/10 10:39:21 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class AForm {
 		int getGradeToExecute() const;
 
 		void beSigned(Bureaucrat &bureaucrat);
-		void checkExecutionRequirements(const Bureaucrat &bureaucrat);
+		void checkExecutionRequirements(const Bureaucrat &bureaucrat) const;
 		virtual void execute(Bureaucrat const &executor) const = 0;
 
 		class GradeTooHighException : public std::runtime_error {
@@ -49,7 +49,7 @@ class AForm {
 
 		class FormNotSignedException : public std::runtime_error {
 			public:
-				GradeTooLowException(const std::string &message);
+				FormNotSignedException(const std::string &message);
 		}
 };
 
