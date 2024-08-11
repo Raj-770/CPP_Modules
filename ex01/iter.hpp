@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 16:55:58 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 17:01:32 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/11 17:07:22 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 template <typename T>
 void iter(T* array, size_t length, void (*func)(T&)) {
-	for (size_t i = 0; i < lenght; i++)
+	for (size_t i = 0; i < length; i++)
 		func(array[i]);
 }
 
 template <typename T>
-void printElemet(T element) {
+void printElement(T element) {
 	std::cout << element << " ";
 }
 
