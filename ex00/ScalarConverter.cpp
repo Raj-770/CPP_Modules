@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:46:44 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 13:35:54 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/11 13:52:26 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void ScalarConverter::formatFloatAsScalars(double floatValue) {
 	if (floatValue < std::numeric_limits<int>::min() || floatValue > std::numeric_limits<int>::max())
 		std::cout << "int: Overflow" << std::endl;
 	else
-		std::cout << "int: " << floatValue << std::endl;
+		std::cout << "int: " << static_cast<int>(floatValue) << std::endl;
 
 	std::cout << std::fixed;
 
@@ -168,7 +168,7 @@ void ScalarConverter::formatDoubleAsScalars(long double doubleValue) {
 	if (doubleValue < std::numeric_limits<int>::min() || doubleValue > std::numeric_limits<int>::max())
 		std::cout << "int: Overflow" << std::endl;
 	else
-		std::cout << "int: " << doubleValue << std::endl;
+		std::cout << "int: " << static_cast<int>(doubleValue) << std::endl;
 
 	std::cout << std::fixed;
 
