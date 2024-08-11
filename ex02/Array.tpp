@@ -6,9 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 17:32:21 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 17:48:20 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/11 17:52:27 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <iostream>
 
 template <typename T>
 Array<T>::Array() : _array(NULL), _size(0) {}
@@ -44,13 +46,13 @@ Array<T>::~Array() {
 }
 
 template <typename T>
-Array<T>& Array<T>::operator[](unsigned int index) {
-	if (index >= size)
+T& Array<T>::operator[](unsigned int index) {
+	if (index >= _size)
 		throw std::out_of_range("Index out of bounds");
 	return (_array[index]);
 }
 
 template <typename T>
-unsigned int Array<T>::size() {
+unsigned int Array<T>::size() const {
 	return (_size);
 }

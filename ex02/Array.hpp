@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 17:26:04 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 17:31:24 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/11 17:51:50 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ class Array {
 
 	public:
 		Array();
+		Array(unsigned int n);
 		Array(const Array& other);
-		operator=(const Array& other);
+		Array& operator=(const Array& other);
 		~Array();
 
 		T& operator[](unsigned int index);
 		unsigned int size() const;
-}
+};
 
 #include "Array.tpp"
 
