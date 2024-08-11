@@ -6,23 +6,24 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 15:03:55 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 15:12:27 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/11 15:28:53 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Functions.cpp"
+#include "Functions.hpp"
 #include <iostream>
 #include <cstdlib>
 
 Base* generate(void) {
-	switch (std::rand % 3) {
-		case 1:
+	int i = std::rand() % 3;
+	switch (i) {
+		case 0:
 			return new A;
-		case 2:
+		case 1:
 			return new B;
-		case 3:
+		case 2:
 			return new C;
-		default
+		default:
 			return NULL;
 	}
 }
@@ -36,20 +37,21 @@ void identify(Base *p) {
 		std::cout << "C" << std::endl;
 }
 
-void identify(Base &p) {
+void identify(Base& p) {
 	try {
-		if (dynamic_cast<A&>(p))
-			std::cout << "A" << std::endl;
-	} catch (std::bad_cast&) {
-		try {
-			if (dynamic_cast<B&>(p))
-				std::cout << "B" << std::endl;
-		} catch (std::bad_cast&) {
-			try {
-				if (dynamic_cast<C&>(p))
-					std::cout << "C" << std::endl;
-			} catch (std::bad_cast&) {
-			}
-		}
-	}
+		(void)dynamic_cast<A&>(p);
+		std::cout << "A" << std::endl;
+		return;
+	} catch (const std::bad_cast&) {}
+
+	try {
+		(void)dynamic_cast<B&>(p);
+		std::cout << "B" << std::endl;
+		return;
+	} catch (const std::bad_cast&) {}
+	try {
+		(void)dynamic_cast<C&>(p);
+		std::cout << "C" << std::endl;
+		return;
+	} catch (const std::bad_cast&) {}
 }
