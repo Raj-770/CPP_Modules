@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:46:44 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 13:52:26 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:56:56 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ void ScalarConverter::formatIntAsScalars(long intValue) {
 	else
 		std::cout << "int: " << intValue << std::endl;
 
-	std::cout	<< std::fixed
+	std::cout	<< std::fixed << std::setprecision(1)
 				<< "float: " << static_cast<float>(intValue) << "f" << std::endl
 				<< "double: " << static_cast<double>(intValue) << std::endl;
 }

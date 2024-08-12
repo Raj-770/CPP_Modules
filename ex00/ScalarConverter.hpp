@@ -6,22 +6,24 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:43:27 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 13:27:02 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:57:39 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
+#include <climits>
+#include <iomanip>
 #include <iostream>
-#include <string>
+#include <limits>
 #include <sstream>
 
 struct ScalarData {
 	char charValue;
 	long integerValue;
 	double floatValue;
-	double doubleValue;
+	long double doubleValue;
 };
 
 enum Type { CHAR, INT, FLOAT, DOUBLE, PSEUDO, UNKNOWN };
