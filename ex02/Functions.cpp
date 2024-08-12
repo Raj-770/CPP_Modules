@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 15:03:55 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/11 15:28:53 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/12 12:04:22 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ Base* generate(void) {
 			return NULL;
 	}
 }
+
+/*
+	dynamic_cast is a type of casting operator in C++ that is used specifically with
+	pointers and references to classes that have polymorphic behavior (i.e.,
+	classes that have at least one virtual function). It is primarily used to
+	safely convert pointers and references of one class type to another within an
+	inheritance hierarchy.
+*/
 
 void identify(Base *p) {
 	if (dynamic_cast<A*>(p))
