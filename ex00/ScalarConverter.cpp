@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:46:44 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/12 11:56:56 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:21:36 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,19 @@ void ScalarConverter::convert(const std::string& literal) {
 	}
 }
 
+bool containsTwoOrMoreDots(const std::string& input) {
+	int dotCount = 0;
+	for (unsigned int i = 0; i < input.length(); i++) {
+		if (input[i] == '.') {
+			dotCount++;
+			if (dotCount >= 2) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 /**
  * @brief finds the type of the literal with the help if input string stream.
  *
@@ -56,6 +69,9 @@ void ScalarConverter::convert(const std::string& literal) {
  */
 Type ScalarConverter::findType(std::string& literal, ScalarData& scalarData) {
 	std::istringstream input(literal);
+
+	if (containsTwoOrMoreDots(literal))
+		return (UNKNOWN);
 
 	// Checking if it is a psuedo literal
 	if (literal == "nan" || literal == "-inf" || literal == "+inf" || literal == "inf" || literal == "nanf" || literal == "-inff" || literal == "+inff" || literal == "inff")
