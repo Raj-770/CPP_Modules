@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 14:03:44 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/12 14:35:18 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/12 15:18:35 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 #include <algorithm>
 #include <vector>
+#include <limits>
+#include <iostream>
 
-class span {
+class Span {
 	private:
 		std::vector<int> numbers;
 		unsigned int max_size;
