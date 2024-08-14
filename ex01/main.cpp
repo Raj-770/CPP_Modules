@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:35:07 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/07/31 17:06:44 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/14 13:26:57 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int main() {
 
 		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
-
+		if (std::cin.eof())
+			return 0;
 		if (command == "EXIT") {
 			std::cout << "Thank you for using the phone book. Byee!" << std::endl;
 			break;
