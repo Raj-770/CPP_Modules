@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:23:57 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/02 15:36:30 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:39:40 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main( void ) {
 	Fixed a;
-	Fixed const b( 10 );
+	Fixed const b( 1 );
 	Fixed const c( 42.42f );
 	Fixed const d( b );
 
@@ -28,6 +28,7 @@ int main( void ) {
 
 	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.getRawBits() << " as fixed point" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 
