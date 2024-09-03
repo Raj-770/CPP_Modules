@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 14:26:00 by rpambhar          #+#    #+#             */
-/*   Updated: 2024/08/14 12:57:34 by rpambhar         ###   ########.fr       */
+/*   Updated: 2024/09/03 17:52:05 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,6 @@ std::map<std::string, double> BitcoinExchange::readDatabase(const std::string& d
 double BitcoinExchange::getExchangeRate(const std::string& data_line) {
 	std::pair<std::string, double> value = parseData(data_line, '|');
 	std::map<std::string, double>::iterator it = exchangeRate.lower_bound(value.first);
-	if (it != exchangeRate.begin() && it == exchangeRate.end())
-		--it;
 	if (it == exchangeRate.end())
 		throw std::runtime_error("No applicable exchnage rate found");
 	return it->second;
